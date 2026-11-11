@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ANIMAGO</title>
+  <!-- Tipografía PT Serif (única familia del proyecto) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  CÓMO INCORPORAR MATERIALES
+  - Video:  reemplazar el nombre en <source src="assets/videos/...">. Subtítulos: archivo .vtt en <track>.
+  - Imagen: reemplazar el nombre en <img src="assets/images/..."> y completar el atributo alt.
+  - Audio:  reemplazar el nombre en <source src="assets/audio/...">.
+  - Navegación: cada <section> tiene un id; los enlaces internos (#id) las conectan.
+-->
+<main class="libro">
+
+  <!-- 01. PORTADA -->
+  <section class="pagina portada" id="portada" aria-labelledby="t-portada">
+    <div class="media video fondo-portada">
+      <video muted loop playsinline preload="none">
+        <source src="assets/videos/portada.mp4" type="video/mp4">
+      </video>
+      <span class="ph">Espacio para video o imagen animada de portada</span>
+    </div>
+    <div class="orn" aria-hidden="true">☾</div>
+    <h1 id="t-portada">ANIMAGO</h1>
+    <p class="frase"><em>Hay un conocimiento que ningún libro de Hogwarts se atreve a enseñar.</em></p>
+    <p><a class="btn" href="#prologo">Comenzar</a></p>
+    <p class="aparte"><a href="#creditos">Créditos y licencia</a></p>
+  </section>
+
+  <!-- 02. PRÓLOGO -->
+  <section class="pagina" id="prologo" aria-labelledby="t-prologo">
+    <header class="cabecera">
+      <label class="progreso">Prólogo: 1 de 7 <progress max="7" value="1">1 de 7</progress></label>
+      <h2 id="t-prologo">Prólogo: el descubrimiento</h2>
+    </header>
+    <div class="media video">
+      <video controls preload="none">
+        <source src="assets/videos/prologo.mp4" type="video/mp4">
+        <track kind="subtitles" src="assets/videos/prologo-es.vtt" srclang="es" label="Español">
+      </video>
+      <span class="ph">Espacio para video del prólogo</span>
+    </div>
+    <p class="subtitulos">Espacio para subtítulos o transcripción del video.</p>
+    <div class="fila">
+      <div class="media imagen"><img src="assets/images/prologo.jpg" alt=""><span class="ph">Imagen fija</span></div>
+      <div class="media audio"><audio controls preload="none"><source src="assets/audio/prologo.mp3" type="audio/mpeg"></audio><span class="ph">Audio</span></div>
+    </div>
+    <div class="texto">
+      <p>Eres un estudiante de Hogwarts, solitario, que disfruta recorrer el bosque cercano al castillo para observar a las criaturas mágicas y acercarse a ellas.</p>
+      <p>Una tarde sigues a una manada de Kneazles y te pierdes entre los árboles. Al oír voces humanas te acercas con precaución y descubres un campamento de Furtivos: hombres enmascarados, numerosas jaulas y criaturas mágicas capturadas.</p>
+      <p>Los Furtivos las cazan, las maltratan y las venden, o las usan en peleas clandestinas. No puedes pedir ayuda. Entonces tomas una decisión: realizar el ritual para convertirte en Animago, transformarte en un animal, infiltrarte en sus campamentos sin levantar sospechas y liberar a las criaturas cautivas.</p>
+    </div>
+    <p><a class="btn" href="#etapa1">Comenzar la primera etapa</a></p>
+  </section>
+
+  <!-- 03. PRIMERA ETAPA -->
+  <section class="pagina" id="etapa1" aria-labelledby="t-e1">
+    <header class="cabecera">
+      <label class="progreso">Etapa 1 de 4 (paso 2 de 7) <progress max="7" value="2">2 de 7</progress></label>
+      <h2 id="t-e1">Primera etapa: la mandrágora</h2>
+    </header>
+    <div class="media video">
+      <video controls preload="none">
+        <source src="assets/videos/etapa1.mp4" type="video/mp4">
+        <track kind="subtitles" src="assets/videos/etapa1-es.vtt" srclang="es" label="Español">
+      </video>
+      <span class="ph">Espacio para video de la primera etapa</span>
+    </div>
+    <p class="subtitulos">Espacio para subtítulos o transcripción del video.</p>
+    <div class="fila">
+      <div class="media imagen"><img src="assets/images/etapa1.jpg" alt=""><span class="ph">Imagen fija</span></div>
+      <div class="media audio"><audio controls preload="none"><source src="assets/audio/etapa1.mp3" type="audio/mpeg"></audio><span class="ph">Audio</span></div>
+    </div>
+    <div class="texto">
+      <p>El ritual comienza con una hoja de mandrágora. Debes mantenerla en la boca durante un mes completo, desde una luna llena hasta la siguiente.</p>
+      <p>La hoja no puede retirarse ni ingerirse en ningún momento.</p>
+    </div>
+    <form class="prueba" aria-labelledby="q1">
+      <fieldset>
+        <legend><h3 id="q1">Prueba: la hoja de mandrágora</h3></legend>
+        <p>¿Qué debes hacer con la hoja durante el mes?</p>
+        <label class="op"><input type="radio" name="q1" class="i"><span>Masticarla despacio y tragarla al final de cada semana.</span></label>
+        <label class="op"><input type="radio" name="q1" class="c"><span>Mantenerla en la boca de una luna llena a la siguiente, sin retirarla ni ingerirla.</span></label>
+        <label class="op"><input type="radio" name="q1" class="i"><span>Retirarla para dormir y volver a colocarla al despertar.</span></label>
+        <p class="fb fb-i" role="status">✕ Respuesta incorrecta. Un error así arruinaría el ritual. Vuelve a leer el procedimiento e inténtalo de nuevo.</p>
+        <p class="fb fb-c" role="status">✦ Respuesta correcta. La hoja permanece en tu boca y el ritual sigue su curso.</p>
+        <a class="btn cont" href="#etapa2">Continuar a la segunda etapa</a>
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- 04. SEGUNDA ETAPA -->
+  <section class="pagina" id="etapa2" aria-labelledby="t-e2">
+    <header class="cabecera">
+      <label class="progreso">Etapa 2 de 4 (paso 3 de 7) <progress max="7" value="3">3 de 7</progress></label>
+      <h2 id="t-e2">Segunda etapa: la preparación de la poción</h2>
+    </header>
+    <div class="media video">
+      <video controls preload="none">
+        <source src="assets/videos/etapa2.mp4" type="video/mp4">
+        <track kind="subtitles" src="assets/videos/etapa2-es.vtt" srclang="es" label="Español">
+      </video>
+      <span class="ph">Espacio para video de la segunda etapa</span>
+    </div>
+    <p class="subtitulos">Espacio para subtítulos o transcripción del video.</p>
+    <div class="fila">
+      <div class="media imagen"><img src="assets/images/etapa2.jpg" alt=""><span class="ph">Imagen fija</span></div>
+      <div class="media audio"><audio controls preload="none"><source src="assets/audio/etapa2.mp3" type="audio/mpeg"></audio><span class="ph">Audio</span></div>
+    </div>
+    <div class="texto">
+      <p>En la próxima luna llena visible, coloca la hoja de mandrágora en un frasco bañado por los rayos directos de la luna.</p>
+      <p>Agrega un cabello propio, una cucharadita de rocío plateado que no haya recibido luz solar ni haya sido pisado por personas durante siete días, y la crisálida de una polilla esfinge de la calavera.</p>
+      <p>La mezcla debe permanecer en un lugar tranquilo y oscuro, sin ser perturbada.</p>
+    </div>
+    <form class="prueba" aria-labelledby="q2">
+      <fieldset>
+        <legend><h3 id="q2">Prueba: el frasco y sus ingredientes</h3></legend>
+        <p>¿Qué contiene el frasco y dónde debe reposar la mezcla?</p>
+        <label class="op"><input type="radio" name="q2" class="i"><span>Hoja de mandrágora, rocío plateado pisado a diario y una polilla viva, en un lugar iluminado.</span></label>
+        <label class="op"><input type="radio" name="q2" class="i"><span>Solo la hoja y un cabello ajeno, al sol del mediodía.</span></label>
+        <label class="op"><input type="radio" name="q2" class="c"><span>Hoja de mandrágora, un cabello propio, rocío plateado sin luz solar ni pisadas durante siete días y la crisálida de una polilla esfinge de la calavera; en un lugar tranquilo y oscuro.</span></label>
+        <p class="fb fb-i" role="status">✕ Respuesta incorrecta. Un ingrediente equivocado o una mezcla perturbada echan a perder la poción. Inténtalo de nuevo.</p>
+        <p class="fb fb-c" role="status">✦ Respuesta correcta. La poción reposa en la oscuridad, intacta.</p>
+        <a class="btn cont" href="#etapa3">Continuar a la tercera etapa</a>
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- 05. TERCERA ETAPA -->
+  <section class="pagina" id="etapa3" aria-labelledby="t-e3">
+    <header class="cabecera">
+      <label class="progreso">Etapa 3 de 4 (paso 4 de 7) <progress max="7" value="4">4 de 7</progress></label>
+      <h2 id="t-e3">Tercera etapa: la espera y el conjuro</h2>
+    </header>
+    <div class="media video">
+      <video controls preload="none">
+        <source src="assets/videos/etapa3.mp4" type="video/mp4">
+        <track kind="subtitles" src="assets/videos/etapa3-es.vtt" srclang="es" label="Español">
+      </video>
+      <span class="ph">Espacio para video de la tercera etapa</span>
+    </div>
+    <p class="subtitulos">Espacio para subtítulos o transcripción del video.</p>
+    <div class="fila">
+      <div class="media imagen"><img src="assets/images/etapa3.jpg" alt=""><span class="ph">Imagen fija</span></div>
+      <div class="media audio"><audio controls preload="none"><source src="assets/audio/etapa3.mp3" type="audio/mpeg"></audio><span class="ph">Audio</span></div>
+    </div>
+    <div class="texto">
+      <p>Ahora debes esperar hasta que se produzca una tormenta eléctrica.</p>
+      <p>Mientras tanto, al amanecer y al atardecer, recita el conjuro con la punta de tu varita apuntando hacia el corazón:</p>
+      <p class="conjuro"><em>«Amato Animo Animato Animagus»</em></p>
+    </div>
+    <form class="prueba" aria-labelledby="q3">
+      <fieldset>
+        <legend><h3 id="q3">Prueba: el conjuro</h3></legend>
+        <p>¿Cuándo y cómo debes recitar el conjuro durante la espera?</p>
+        <label class="op"><input type="radio" name="q3" class="i"><span>Solo una vez, en plena tormenta, con la varita hacia el cielo.</span></label>
+        <label class="op"><input type="radio" name="q3" class="c"><span>Al amanecer y al atardecer, con la punta de la varita apuntando hacia el corazón.</span></label>
+        <label class="op"><input type="radio" name="q3" class="i"><span>Cada noche, con la varita apuntando hacia el frasco.</span></label>
+        <p class="fb fb-i" role="status">✕ Respuesta incorrecta. Un conjuro mal dirigido pone en riesgo todo lo logrado. Inténtalo de nuevo.</p>
+        <p class="fb fb-c" role="status">✦ Respuesta correcta. Las palabras y el gesto quedan grabados en ti.</p>
+        <a class="btn cont" href="#etapa4">Continuar a la cuarta etapa</a>
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- 06. CUARTA ETAPA -->
+  <section class="pagina" id="etapa4" aria-labelledby="t-e4">
+    <header class="cabecera">
+      <label class="progreso">Etapa 4 de 4 (paso 5 de 7) <progress max="7" value="5">5 de 7</progress></label>
+      <h2 id="t-e4">Cuarta etapa: la transformación</h2>
+    </header>
+    <div class="media video">
+      <video controls preload="none">
+        <source src="assets/videos/etapa4.mp4" type="video/mp4">
+        <track kind="subtitles" src="assets/videos/etapa4-es.vtt" srclang="es" label="Español">
+      </video>
+      <span class="ph">Espacio para video de la cuarta etapa</span>
+    </div>
+    <p class="subtitulos">Espacio para subtítulos o transcripción del video.</p>
+    <div class="fila">
+      <div class="media imagen"><img src="assets/images/etapa4.jpg" alt=""><span class="ph">Imagen fija</span></div>
+      <div class="media audio"><audio controls preload="none"><source src="assets/audio/etapa4.mp3" type="audio/mpeg"></audio><span class="ph">Audio</span></div>
+    </div>
+    <div class="texto">
+      <p>Llega la tormenta eléctrica. Debes dirigirte de inmediato a un lugar amplio y seguro.</p>
+      <p>Allí recita el conjuro por última vez y bebe la poción.</p>
+    </div>
+    <form class="prueba" aria-labelledby="q4">
+      <fieldset>
+        <legend><h3 id="q4">Prueba final: la transformación</h3></legend>
+        <p>Cuando llega la tormenta, ¿qué debes hacer?</p>
+        <label class="op"><input type="radio" name="q4" class="i"><span>Esperar a que la tormenta pase y beber la poción dentro del castillo.</span></label>
+        <label class="op"><input type="radio" name="q4" class="i"><span>Beber la poción en el sitio donde estés, sin recitar el conjuro.</span></label>
+        <label class="op"><input type="radio" name="q4" class="c"><span>Ir de inmediato a un lugar amplio y seguro, recitar el conjuro por última vez y beber la poción.</span></label>
+        <p class="fb fb-i" role="status">✕ Respuesta incorrecta. Dudar o elegir mal el lugar puede costar caro. Inténtalo de nuevo.</p>
+        <p class="fb fb-c" role="status">✦ Respuesta correcta. El momento ha llegado.</p>
+        <a class="btn cont" href="#desenlace">Ir al desenlace</a>
+      </fieldset>
+    </form>
+  </section>
+
+  <!-- 07. DESENLACE -->
+  <section class="pagina" id="desenlace" aria-labelledby="t-fin">
+    <header class="cabecera">
+      <label class="progreso">Ritual completo: 7 de 7 <progress max="7" value="7">7 de 7</progress></label>
+      <h2 id="t-fin">Desenlace</h2>
+    </header>
+    <div class="media video">
+      <video controls preload="none">
+        <source src="assets/videos/desenlace.mp4" type="video/mp4">
+        <track kind="subtitles" src="assets/videos/desenlace-es.vtt" srclang="es" label="Español">
+      </video>
+      <span class="ph">Espacio para video de la transformación</span>
+    </div>
+    <p class="subtitulos">Espacio para subtítulos o transcripción del video.</p>
+    <div class="fila">
+      <div class="media imagen"><img src="assets/images/desenlace.jpg" alt=""><span class="ph">Imagen fija</span></div>
+      <div class="media audio"><audio controls preload="none"><source src="assets/audio/desenlace.mp3" type="audio/mpeg"></audio><span class="ph">Audio</span></div>
+    </div>
+    <div class="texto">
+      <p>El ritual ha terminado. Tu cuerpo cambia: ya eres Animago.</p>
+      <p>Recuerdas lo que viste en el bosque: las jaulas, los hombres enmascarados, las criaturas cautivas. Ahora puedes transformarte, infiltrarte en los campamentos de los Furtivos sin levantar sospechas y liberarlas.</p>
+    </div>
+    <p class="botones">
+      <a class="btn" href="#portada">Volver a comenzar</a>
+      <a class="btn" href="#creditos">Ver créditos</a>
+    </p>
+  </section>
+
+  <!-- CRÉDITOS Y LICENCIA (completar los campos entre corchetes) -->
+  <section class="pagina" id="creditos" aria-labelledby="t-cred">
+    <header class="cabecera"><h2 id="t-cred">Créditos y licencia</h2></header>
+    <div class="texto creditos">
+      <h3>Integrantes</h3>
+      <p>[Nombre del integrante]: [rol y tareas desarrolladas]</p>
+      <p>[Nombre del integrante]: [rol y tareas desarrolladas]</p>
+      <p>[Nombre del integrante]: [rol y tareas desarrolladas]</p>
+      <h3>Autoría de los materiales audiovisuales</h3>
+      <p>[Videos: autoría] · [Imágenes: autoría] · [Audios: autoría] · [Textos: autoría]</p>
+      <h3>Recursos externos</h3>
+      <p>[Recurso]: [autor y fuente]</p>
+      <p>Tipografía: PT Serif. [Completar autoría y licencia]</p>
+      <h3>Universo de referencia</h3>
+      <p>Videojuego <em>Hogwarts Legacy</em>. [Completar titulares y datos de referencia]</p>
+      <h3>Licencia</h3>
+      <p>[Licencia libre elegida por el equipo: CC BY o CC BY-SA]</p>
+    </div>
+    <p><a class="btn" href="#portada">Volver a la portada</a></p>
+  </section>
+
+</main>
+</body>
+</html>
